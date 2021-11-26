@@ -1,11 +1,11 @@
 const INITIAL_STATE = [
   {
-    questionText: "What is the capital of Pakistan?",
+    questionText: " Which of these elements are all <table> elements?",
     answerOptions: [
-      { answerText: "New York", isCorrect: false },
-      { answerText: "London", isCorrect: false },
-      { answerText: "islamabad", isCorrect: true },
-      { answerText: "Dubai", isCorrect: false },
+      { answerText: "<table><head><tfoot>", isCorrect: false },
+      { answerText: "<thead><body><tr>", isCorrect: false },
+      { answerText: "<table><tr><td>", isCorrect: true },
+      { answerText: "<table><tr><tt>", isCorrect: false },
     ],
   },
   {
@@ -18,23 +18,53 @@ const INITIAL_STATE = [
     ],
   },
   {
-    questionText: "The iPhone was created by which company?",
+    questionText: "Who is making the Web standards?",
     answerOptions: [
-      { answerText: "Apple", isCorrect: true },
-      { answerText: "Intel", isCorrect: false },
-      { answerText: "Amazon", isCorrect: false },
-      { answerText: "Microsoft", isCorrect: false },
+      { answerText: "MicroSoft", isCorrect: false },
+      { answerText: "Google", isCorrect: false },
+      { answerText: "The World  Wide Web Consortium", isCorrect: true },
+      { answerText: "Mozilla FireFox", isCorrect: false },
     ],
   },
   {
-    questionText: "React is library of ?",
+    questionText: " What does HTML stand for?",
     answerOptions: [
-      { answerText: "c ", isCorrect: false },
-      { answerText: "php", isCorrect: false },
-      { answerText: "python", isCorrect: false },
-      { answerText: "js", isCorrect: true },
+      { answerText: "Home Tool Markup Language", isCorrect: false },
+      { answerText: "Hyperlink Markup Language", isCorrect: false },
+      { answerText: "HyperText Markup Language", isCorrect: true },
+      { answerText: "HyperStar Markup Language", isCorrect: false },
     ],
   },
+  {
+    questionText: "What is the capital of Pakistan?",
+    answerOptions: [
+      { answerText: "New York", isCorrect: false },
+      { answerText: "London", isCorrect: false },
+      { answerText: "islamabad", isCorrect: true },
+      { answerText: "Dubai", isCorrect: false },
+    ],
+  },
+  {
+    questionText: "Choose the correct HTML element for the largest heading?",
+    answerOptions: [
+      { answerText: "<h1>", isCorrect: true },
+      { answerText: "<Head>", isCorrect: false },
+      { answerText: "<Heading>", isCorrect: false },
+      { answerText: "<H6>", isCorrect: false },
+    ],
+  },
+  {
+    questionText: " What is the correct HTML element for inserting a line break?",
+    answerOptions: [
+      { answerText: "<lb>", isCorrect: false },
+      { answerText: "<br>", isCorrect: false },
+      { answerText: "<lbr>", isCorrect: false },
+      { answerText: "<break>", isCorrect: true },
+    ],
+  },
+
+
+
 ];
 
 const reducer = (stateReducer = INITIAL_STATE) => {
